@@ -1,6 +1,77 @@
+:root {
+  --color-primary: #12376e;
+  --color-primary-2: #34598f; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
 html {
   font-size: 62.5%; }
 
 body {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif; }
+  font-family: "Lato", sans-serif; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/* ========================================================================== */
+/* NAVBAR */
+/* ========================================================================== */
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-row-gap: 1.6rem;
+  margin-top: 1.6rem; }
+
+/* ========================================================================== */
+/* NAVBAR */
+/* ========================================================================== */
+.social-icons {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  align-items: center; }
+
+.first-nav {
+  grid-column: 6 / 10;
+  grid-row: 1 / 2; }
+  .first-nav__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+    .first-nav__list .first-nav-item__link {
+      font-size: 1.6rem;
+      color: var(--color-primary);
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
+      .first-nav__list .first-nav-item__link span {
+        font-size: 1.3rem;
+        color: var(--color-primary-2); }
+      .first-nav__list .first-nav-item__link i {
+        font-size: 1.3rem;
+        margin-right: .3rem; }
+      .first-nav__list .first-nav-item__link::after {
+        content: "";
+        width: 0;
+        height: .1rem;
+        background-color: var(--color-primary);
+        display: block;
+        margin: auto;
+        transition: width 0.2s cubic-bezier(0.55, 0, 0.98, 0.54); }
+      .first-nav__list .first-nav-item__link:hover::after {
+        width: 100%; }
+
+.social-icon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  transition: all .2s; }
+  .social-icon:hover {
+    color: var(--color-primary-2);
+    transform: rotateZ(360deg); }

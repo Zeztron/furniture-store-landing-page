@@ -1,0 +1,66 @@
+/* ========================================================================== */
+/* NAVBAR */
+/* ========================================================================== */
+.social-icons {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    align-items: center;
+}
+
+.first-nav {
+    grid-column: 6 / 10;
+    grid-row: 1 / 2;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+        .first-nav-item {
+
+            &__link {
+                font-size: 1.6rem;
+                color: var(--color-primary);
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+
+                span {
+                    font-size: 1.3rem;
+                    color: var(--color-primary-2);
+                }
+
+                i {
+                    font-size: 1.3rem;
+                    margin-right: .3rem;
+                }
+
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: .1rem;
+                    background-color: var(--color-primary);
+                    display: block;
+                    margin: auto;
+                    transition: width .2s cubic-bezier(.55, 0, .98, .54);
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    transition: all .2s;
+
+    &:hover {
+        color: var(--color-primary-2);
+        transform: rotateZ(360deg);
+    }
+}
