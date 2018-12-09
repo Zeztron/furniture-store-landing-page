@@ -4,7 +4,7 @@
 .container {
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(3, min-content) 70vh;
     grid-row-gap: 1.6rem;
     margin-top: 1.6rem;
 
@@ -15,4 +15,13 @@
         grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
         align-items: center;
     }
+}
+
+/* ========================================================================== */
+/* BANNER */
+/* ========================================================================== */
+.banner {
+    grid-column: 2 / 10;
+    grid-row: 4 / 5;
+    background-color: #ccc;
 }

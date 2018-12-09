@@ -26,7 +26,7 @@ a {
 .container {
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, min-content) 70vh;
   grid-row-gap: 1.6rem;
   margin-top: 1.6rem; }
   .container .social-icons {
@@ -35,6 +35,14 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     align-items: center; }
+
+/* ========================================================================== */
+/* BANNER */
+/* ========================================================================== */
+.banner {
+  grid-column: 2 / 10;
+  grid-row: 4 / 5;
+  background-color: #ccc; }
 
 /* ========================================================================== */
 /* NAVBAR */
@@ -164,3 +172,52 @@ a {
   display: block; }
   .dropdown-list-link:hover {
     color: var(--color-primary-3); }
+
+/* ========================================================================== */
+/* BANNER */
+/* ========================================================================== */
+.banner {
+  position: relative; }
+  .banner__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center; }
+    .banner__content--heading {
+      font-size: 10rem;
+      color: var(--color-primary);
+      margin-bottom: 6rem; }
+    .banner__content--btn {
+      width: 16rem;
+      height: 5rem;
+      background: linear-gradient(to top, #00154c, var(--color-primary), #23487f);
+      color: #fff;
+      text-transform: uppercase;
+      border: .1rem solid #fff;
+      border-radius: .3rem;
+      outline: none;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer; }
+      .banner__content--btn .banner-btn-text-1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        transition: top .2s; }
+      .banner__content--btn:hover .banner-btn-text-1 {
+        top: -100%; }
+      .banner__content--btn .banner-btn-text-2 {
+        position: absolute;
+        top: 150%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        transition: top .2s; }
+      .banner__content--btn:hover .banner-btn-text-2 {
+        top: 50%; }
+  .banner__slideshow {
+    display: none; }
