@@ -1,12 +1,15 @@
 /* ========================================================================== */
 /* NAVBAR */
 /* ========================================================================== */
-.social-icons {
-    grid-column: 2 / 4;
-    grid-row: 1 / 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-    align-items: center;
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    transition: all .2s;
+
+    &:hover {
+        color: var(--color-primary-2);
+        transform: rotateZ(360deg);
+    }
 }
 
 .first-nav {
@@ -54,13 +57,35 @@
     }
 }
 
-.social-icon {
-    font-size: 1.8rem;
-    color: var(--color-primary);
-    transition: all .2s;
+.search {
+    grid-column: 8 / 10;
+    grid-row: 2 / 3;
 
-    &:hover {
-        color: var(--color-primary-2);
-        transform: rotateZ(360deg);
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+
+        &--input {
+            grid-column: 3 / -1;
+            grid-row: 1 / 2;
+            padding: .3rem .4rem;
+            font-size: 1.3rem;
+            border: none;
+            border-bottom: .1rem solid var(--color-primary);
+            outline: none;
+            color: var(--color-primary);
+
+            &::placeholder {
+                color: var(--color-primary-2);
+            }
+        }
+
+        &--btn {
+            grid-column: 10 / -1;
+            grid-row: 1 / 2;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
     }
 }
