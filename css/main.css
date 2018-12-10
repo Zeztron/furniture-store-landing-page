@@ -2,6 +2,7 @@
   --color-primary: #12376e;
   --color-primary-2: #34598f;
   --color-primary-3: #458a9f;
+  --color-primary-4: #23487f;
   --color-secondary: #d38800; }
 
 * {
@@ -27,7 +28,7 @@ a {
 .container {
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-  grid-template-rows: repeat(3, min-content) 70vh;
+  grid-template-rows: repeat(3, min-content) 70vh min-content;
   grid-row-gap: 1.6rem;
   margin-top: 1.6rem; }
   .container .social-icons {
@@ -43,6 +44,35 @@ a {
 .banner {
   grid-column: 2 / 10;
   grid-row: 4 / 5; }
+
+/* ========================================================================== */
+/* DAY OFFER */
+/* ========================================================================== */
+.day-offer {
+  grid-column: 2 / 10;
+  grid-row: 5 / 6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-gap: 1.6rem 3.2rem;
+  justify-items: center; }
+  .day-offer--img-one {
+    grid-column: 1 / 3;
+    grid-row: 1 / -1;
+    width: 100%; }
+  .day-offer--img-two {
+    grid-column: 3 / -1;
+    grid-row: 4 / -1;
+    width: 100%; }
+  .day-offer__heading {
+    grid-column: 3 / -1;
+    grid-row: 1 / 2; }
+  .day-offer__paragraph {
+    grid-column: 3 / -1;
+    grid-row: 2 / 3; }
+  .day-offer__btn {
+    grid-column: 3 / -1;
+    grid-row: 3 / 4; }
 
 /* ========================================================================== */
 /* NAVBAR */
@@ -188,6 +218,7 @@ a {
     text-align: center;
     z-index: 50; }
     .banner__content--heading {
+      padding: 0 2rem;
       font-size: 10rem;
       color: var(--color-primary);
       margin-bottom: 6rem; }
@@ -268,6 +299,36 @@ a {
         width: 100%;
         height: 100%;
         object-fit: cover; }
+
+/* ========================================================================== */
+/* DAY OFFER */
+/* ========================================================================== */
+.day-offer__heading {
+  font-size: 6rem;
+  color: var(--color-primary-4); }
+
+.day-offer__paragraph {
+  font-size: 3rem;
+  color: var(--color-primary-2); }
+
+.day-offer__btn {
+  width: 16rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(to top, #00154c, var(--color-primary), var(--color-primary-4));
+  border: none;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: .2rem .2rem 1rem #777;
+  cursor: pointer;
+  transition: all .2s; }
+  .day-offer__btn:hover {
+    box-shadow: .2rem .2rem 2rem #777; }
+
+.day-offer--img-two {
+  align-self: end; }
 
 @keyframes slideshow {
   0% {
