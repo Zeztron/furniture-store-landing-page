@@ -176,6 +176,8 @@ a {
       display: inline-block;
       width: 100%;
       text-align: center; }
+      .first-nav__list .first-nav-item__link label {
+        cursor: pointer; }
       .first-nav__list .first-nav-item__link span {
         font-size: 1.3rem;
         color: var(--color-primary-2); }
@@ -516,13 +518,14 @@ a {
 .forms-wrapper {
   background-color: #eee;
   position: fixed;
-  top: 50%;
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 1000;
   padding: 2rem;
   border: 0.1rem solid var(--color-primary-2);
-  border-radius: .3rem; }
+  border-radius: .3rem;
+  display: none; }
   .forms-wrapper .x-btn {
     font-size: 2rem;
     color: #00154c;
@@ -556,6 +559,12 @@ a {
       text-align: center;
       border: .1rem solid #eee;
       cursor: pointer; }
+    .forms-wrapper .show-btns-wrapper .show-signup-form {
+      color: #888;
+      background-color: var(--color-primary-2);
+      pointer-events: none; }
+  .forms-wrapper .login-form {
+    display: none; }
 
 .form-heading {
   font-size: 2rem;
@@ -580,6 +589,30 @@ a {
   border: none;
   margin-top: .5rem;
   cursor: pointer; }
+
+#show-form:checked ~ .show-btns-wrapper .show-login-form {
+  color: #888;
+  background-color: var(--color-primary-2);
+  pointer-events: none; }
+
+#show-form:checked ~ .show-btns-wrapper .show-signup-form {
+  color: #fff;
+  background-color: var(--color-primary);
+  pointer-events: initial; }
+
+#show-form:checked ~ .signup-form {
+  display: none; }
+
+#show-form:checked ~ .login-form {
+  display: block; }
+
+#show-hide-forms:checked ~ .forms-wrapper {
+  display: block;
+  animation: anim .5s; }
+
+#show-hide-forms:checked ~ .container {
+  pointer-events: none;
+  opacity: .6; }
 
 @keyframes slideshow {
   0% {
@@ -610,3 +643,13 @@ a {
     left: 0; }
   100% {
     left: 0; } }
+
+@keyframes anim {
+  0% {
+    left: 40%; }
+  50% {
+    left: 60%; }
+  75% {
+    left: 45%; }
+  100% {
+    left: 50%; } }
