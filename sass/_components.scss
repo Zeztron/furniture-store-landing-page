@@ -366,3 +366,65 @@
 /* ========================================================================== */
 /* BEST SELLING */
 /* ========================================================================== */
+.bestselling-furniture {
+    
+    &__header {
+        font-size: 4.5rem;
+        color: var(--color-primary-4);
+        text-align: center;
+        margin: 3rem 0;
+    }
+
+    &__cards {
+        .bestselling-furniture-card {
+            background-color: #efefef;
+            box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+
+            &--img {
+                width: 100%;
+                border-radius: .3rem .3rem .0 0;
+                transition: all .3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            &--heading {
+                background-color: #fffddd;
+                width: 80%;
+                margin: auto;
+                text-align: center;
+                font-size: 2.4rem;
+                color: var(--color-primary-3);
+                padding: .5rem 0;
+                border-radius: .2rem;
+                transform: translateY(-50%);
+            }
+
+            &--paragraph {
+                font-size: 1.9rem;
+                color: var(--color-primary-4);
+                text-align: center;
+                margin-bottom: 1.6rem;
+            }
+
+            &--btn {
+                cursor: pointer;
+                width: 100%;
+                padding: 1.6rem 0;
+                background-color: var(--color-primary);
+                font-size: 1.9rem;
+                color: #fff;
+                border: none;
+                border-radius: 0 0 .3rem .3rem;
+                transition: background-color .2s;
+
+                &:hover {
+                    background-color: var(--color-primary-4);
+                }
+            }
+        }
+    }
+}
