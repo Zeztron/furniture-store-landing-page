@@ -151,6 +151,9 @@ a {
   grid-row: 9 / 10; }
 
 /* ========================================================================== */
+/* MODAL */
+/* ========================================================================== */
+/* ========================================================================== */
 /* NAVBAR */
 /* ========================================================================== */
 .social-icon {
@@ -506,6 +509,77 @@ a {
   font-size: 1.6rem;
   padding: 2rem 0 3rem 0;
   color: var(--color-primary-2); }
+
+/* ========================================================================== */
+/* MODAL */
+/* ========================================================================== */
+.forms-wrapper {
+  background-color: #eee;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 2rem;
+  border: 0.1rem solid var(--color-primary-2);
+  border-radius: .3rem; }
+  .forms-wrapper .x-btn {
+    font-size: 2rem;
+    color: #00154c;
+    font-weight: 700;
+    position: absolute;
+    bottom: 3.3rem;
+    right: 3.5rem;
+    cursor: pointer; }
+  .forms-wrapper form {
+    width: 50rem;
+    padding: 1rem; }
+    .forms-wrapper form input:not(.form-btn) {
+      background-color: #fff;
+      color: #777;
+      padding: 1.3rem;
+      margin: .3rem 0;
+      border: .2rem solid #eee;
+      box-sizing: border-box;
+      outline: none; }
+  .forms-wrapper .show-btns-wrapper {
+    display: flex;
+    padding: 1rem; }
+    .forms-wrapper .show-btns-wrapper .show-form-btn {
+      flex: 0 1 50%;
+      background-color: var(--color-primary);
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 1rem;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      text-align: center;
+      border: .1rem solid #eee;
+      cursor: pointer; }
+
+.form-heading {
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  padding: 1rem 0 0 .2rem; }
+
+.fullname-inputs-wrapper {
+  display: flex; }
+  .fullname-inputs-wrapper input {
+    width: 50%; }
+
+.form-input {
+  width: 100%; }
+
+.form-btn {
+  width: 35%;
+  background-color: var(--color-secondary);
+  color: #fff;
+  letter-spacing: .3rem;
+  padding: 1rem;
+  border: none;
+  margin-top: .5rem;
+  cursor: pointer; }
 
 @keyframes slideshow {
   0% {
